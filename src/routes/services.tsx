@@ -271,16 +271,15 @@ function Services() {
 
                     <CardCurtainRevealDescription className="mt-4 text-zinc-400 text-sm leading-relaxed">
                       <p>{s.blurb}</p>
-                      <div className="mt-4 flex flex-wrap gap-1.5">
+                      <div className="mt-4 flex flex-wrap gap-1.5 mb-6">
                         {s.features.slice(0, 3).map((f) => (
                           <span key={f} className="rounded-full border border-[#04AEEC]/30 bg-[#04AEEC]/10 px-2.5 py-1 text-xs text-[#04AEEC]">{f}</span>
                         ))}
                       </div>
+                      <Button variant="secondary" size="icon" className="aspect-square rounded-full self-start">
+                        <ArrowUpRight className="h-4 w-4" />
+                      </Button>
                     </CardCurtainRevealDescription>
-
-                    <Button variant="secondary" size="icon" className="mt-6 aspect-square rounded-full self-start">
-                      <ArrowUpRight className="h-4 w-4" />
-                    </Button>
 
                     <CardCurtain className="bg-zinc-50" />
                   </CardCurtainRevealBody>

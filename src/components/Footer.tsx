@@ -38,9 +38,7 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Link to="/" className="flex items-center gap-2">
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-gradient-mint font-bold text-primary-foreground shadow-glow">
-                D
-              </span>
+              <img src="/logo.png" alt={SITE.name} className="h-8 w-auto object-contain" />
               <span className="font-display text-lg font-semibold">{SITE.name}</span>
             </Link>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">

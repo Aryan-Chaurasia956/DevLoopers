@@ -13,6 +13,7 @@ import { Story, StorySlide, StoryOverlay, StoryProgress, StoryControls } from "@
 import { BlogPostCard } from "@/components/ui/card-18";
 import { CallToAction } from "@/components/ui/cta";
 import { ProfileCard } from "@/components/ui/profile-card";
+import { StaggerTestimonials } from "@/components/ui/stagger-testimonials";
 import { projects } from "@/data/projects";
 import { posts } from "@/data/posts";
 import { team } from "@/data/team";
@@ -76,7 +77,7 @@ function Home() {
   const featured = projects.slice(0, 3);
   const recent = posts.slice(0, 4).map((p, i) => {
     const images = [
-      "https://images.unsplash.com/photo-1607252656733-fd7458c63d67?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=2070&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
@@ -355,27 +356,8 @@ function Home() {
           eyebrow="What clients say"
           title={<>Trusted by founders <span className="text-gradient-mint">who've shipped before.</span></>}
         />
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {testimonials.map((t) => (
-            <figure
-              key={t.author}
-              className="relative rounded-2xl border border-border bg-surface p-7"
-            >
-              <Quote className="h-6 w-6 text-primary/60" />
-              <blockquote className="mt-4 text-sm leading-relaxed text-foreground/90">
-                "{t.quote}"
-              </blockquote>
-              <figcaption className="mt-6 border-t border-border/60 pt-4">
-                <div className="font-semibold">{t.author}</div>
-                <div className="text-xs text-muted-foreground">{t.role}</div>
-              </figcaption>
-              <div className="absolute right-6 top-6 flex gap-0.5 text-primary">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-3 w-3 fill-current" />
-                ))}
-              </div>
-            </figure>
-          ))}
+        <div className="mt-12">
+          <StaggerTestimonials />
         </div>
       </Section>
 

@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Section, Eyebrow } from "@/components/Section";
+import { Section } from "@/components/Section";
 import { projects, type ProjectCategory } from "@/data/projects";
 import { HoverDetailCard } from "@/components/ui/hover-detail-card";
+import { CinematicHero } from "@/components/ui/cinematic-landing-hero";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
@@ -26,18 +27,17 @@ function Portfolio() {
 
   return (
     <>
-      <section className="relative overflow-hidden border-b border-border">
-        <div className="absolute inset-0 grid-bg opacity-50 mask-fade-b" aria-hidden />
-        <div className="relative mx-auto max-w-7xl px-5 pt-20 pb-16 lg:px-8 lg:pt-32 lg:pb-20">
-          <Eyebrow>Portfolio · {projects.length} projects</Eyebrow>
-          <h1 className="mt-6 max-w-3xl font-display text-5xl font-semibold tracking-tight md:text-6xl">
-            Real ships. <span className="text-gradient-mint">Real metrics.</span>
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            A selection of projects from the past three years. Each case study has the problem, the architecture, and the numbers.
-          </p>
-        </div>
-      </section>
+      <CinematicHero
+        brandName="DevLoopers"
+        tagline1="Real ships,"
+        tagline2="real metrics."
+        cardHeading="Software that roadmaps count on."
+        cardDescription="DevLoopers is a senior team of full-stack web and native Android engineers. We take a brief and ship a system — design, architecture, code, launch."
+        metricValue={50}
+        metricLabel="Ships Delivered"
+        ctaHeading="Start your project."
+        ctaDescription="Tell us about the project — we'll come back inside a working day with a plan and a price."
+      />
 
       <Section>
         <div className="flex flex-wrap gap-2 border-b border-border pb-6">
